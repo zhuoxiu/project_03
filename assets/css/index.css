@@ -1,0 +1,56 @@
+
+.userinfo{
+   display: flex;
+   align-items: center;
+   padding-left: 30px;
+    height: 71px;
+}
+
+#welcom{
+    font-size: 10px;
+}
+.replace{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:skyblue;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 15px;
+}
+
+.userinfo img{
+    line-height: 71px;
+    margin-right: 15px;
+}
+
+.layui-nav-tree a{
+    font-size: 13px;
+}
+
+.layui-nav-tree span,i{
+    margin-right: 6px;
+}
+
+.layui-nav-tree dd{
+    padding-left: 15px;
+}
+
+#touxiang{
+    display: flex;
+    align-items: center;
+
+}
+
+.layui-body{
+    overflow: hidden;
+}
+
+
+.layui-body iframe{
+    
+    width: 100%;
+    height: 100%;
+}
+

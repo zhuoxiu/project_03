@@ -57,9 +57,10 @@ $(function () {
             data:data,
             success:function (res) {
                 if(res.status !== 0) {
-                    layui.layer.msg(res.message);
+                   return layui.layer.msg(res.message);
                 } 
                 layui.layer.msg(res.message);
+                console.log("login:"+res.token)
                 localStorage.setItem("token",res.token);
                 location.href='./index.html'
             }

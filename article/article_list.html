@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/article_list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 筛选区域 -->
+            <form class="layui-form" id="form_article_list">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">分类</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">北京</option>
+                            <option value="1">上海</option>
+                            <option value="2">广州</option>
+                            <option value="3">深圳</option>
+                            <option value="4">杭州</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态</label>
+                    <div class="layui-input-block">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">北京</option>
+                            <option value="1">上海</option>
+                            <option value="2">广州</option>
+                            <option value="3">深圳</option>
+                            <option value="4">杭州</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+
+
+            </form>
+            <!-- 表格区域 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="410">
+                    <col width="169">
+                    <col width="169">
+                    <col width="169">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>分类</th>
+                        <th>发表事件</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <!-- 分页区域 -->
+            <div id="articlePage">
+
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="articlelist">
+        {{each data}}
+            <tr>
+                <th>{{$value.title}}</th>
+                <th>{{$value.cate_name}}</th>
+                <th>{{$value.pub_date|getDate}}</th>
+                <th>{{$value.state}}</th>
+                <th>
+                        <button type="button" class="layui-btn layui-btn-xs">修改</button>
+                        <button type="button" class="layui-btn layui-btn-danger layui-btn-xs deleteId"  data-id="{{$value.Id}}">删除</button>
+                </th>
+            </tr>
+        {{/each}}
+    </script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/template-web.js"></script>
+    <script src="../assets/js/baseAPI.js"></script>
+    <script src="../assets/js/article_list.js"></script>
+</body>
+
+</html>

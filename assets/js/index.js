@@ -46,7 +46,6 @@ function showUserinfo(data) {
     var name = data.nickname || data.username;
     $("#welcom").html("欢迎&nbsp;&nbsp;" + name);
     if (data.user_pic) {
-        console.log(data.user_pic);
         $(".layui-nav-img").prop("src", data.user_pic)
         $(".replace").hide();
 

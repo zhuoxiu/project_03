@@ -9,7 +9,7 @@ $.ajaxPrefilter(function (options) {
 
     options.complete = function (res) {
             // {"status":1,"message":"身份认证失败！"} 
-            if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
+            if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败啊！") {
                 location.href = "./login.html";
                 localStorage.removeItem("token");
         }

@@ -1,0 +1,22 @@
+html,
+body{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    background-color: #f2f3f5;;
+
+}
+
+.article_cate_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+
+
